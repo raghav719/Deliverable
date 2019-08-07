@@ -34,17 +34,17 @@ public  class GroupOfCards  extends WarGame{
             if(p1Card.getValue() > p2Card.getValue()){                           //if player 1 win 
                 deckCPU.addLast(p1Card);                                               //higher value wins both cards and 
                 deckCPU.addLast(p2Card);                                                //places them at the bottom of his deck.
-                System.out.println(player1 + " Wins");
+                System.out.println(player1 + " Wins\n");
             }
  
             else if(p1Card.getValue() < p2Card.getValue()){                     //if player 2 win 
                 deckP1.addLast(p1Card);   
                 deckP1.addLast(p2Card);  
-                System.out.println("Computer Wins");
+                System.out.println("Computer Wins\n");
             }
             
             else {                                          //IF both cards are same then WAR!!!
-                System.out.println("!!!!WAR!!!!"); 
+                System.out.println("war"); 
                 
                 //creating war cards
                 List<Card> war1 = new ArrayList<Card>(); 
@@ -60,7 +60,7 @@ public  class GroupOfCards  extends WarGame{
                     }
                     
                     
-                    System.out.println("War card for " +player1+ " is ||\nWar card for Computer is ||");
+                    System.out.println("War card for " +player1+ " is |_|\nWar card for Computer is |_|");
 
                     war1.add(deckCPU.pop());  //place additional cards for war
                     war2.add(deckP1.pop());                  

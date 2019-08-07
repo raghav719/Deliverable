@@ -45,19 +45,10 @@ public class CardTest {
     /**
      * Test of getValue method, of class Card.
      */
-    @Test
-    public void testGetValue() {
-        System.out.println("getValue");
-        Card instance = null;
-        int expResult = c1.getValue();
-        int result = c1.getValue();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
+
     @Test
     public void testGetValueGood() {
-        System.out.println("getValue");
+        System.out.println("getValue: Good");
         Card instance = null;
         int expResult = c1.getValue();
         int result = c1.getValue();
@@ -67,7 +58,7 @@ public class CardTest {
     }
     @Test
     public void testGetValueBad() {
-        System.out.println("getValue");
+        System.out.println("getValue: Bad");
         Card instance = null;
         int expResult =c1.getValue();
         int result = 0;
@@ -77,7 +68,7 @@ public class CardTest {
     }
         @Test
     public void testGetValueBoundary() {
-        System.out.println("getValue");
+        System.out.println("getValue: Boundary");
         Card instance = null;
         int expResult = c1.getValue();
         int result = 0;
@@ -88,20 +79,11 @@ public class CardTest {
     /**
      * Test of getSuit method, of class Card.
      */
-    @Test
-    public void testGetSuit() {
-        System.out.println("getSuit");
-        Card instance = null;
-        int expResult = c1.getSuit();
-        int result = c1.getSuit();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
+
     
     @Test
  public void testGetSuitGood() {
-        System.out.println("getSuit");
+        System.out.println("getSuit: Good");
         Card instance = null;
         int expResult = c1.getSuit();
         int result = c1.getSuit();
@@ -111,7 +93,7 @@ public class CardTest {
     }
  @Test
   public void testGetSuitBad() {
-        System.out.println("getSuit");
+        System.out.println("getSuit: Bad");
         Card instance = null;
         int expResult = c1.getSuit();
         int result = 0;
@@ -121,7 +103,7 @@ public class CardTest {
     }
   @Test
    public void testGetSuitBoundary() {
-        System.out.println("getSuit");
+        System.out.println("getSuit: Boundary");
         Card instance = null;
         int expResult = c1.getSuit();
         int result = 0;
