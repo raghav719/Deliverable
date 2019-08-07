@@ -16,7 +16,6 @@ public class Player {
     
     //field variable
     private String playerName;
-    private String playerID;
     
     public void setName(String newPlayerName){
         playerName=newPlayerName;
