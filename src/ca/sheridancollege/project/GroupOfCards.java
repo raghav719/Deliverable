@@ -82,7 +82,7 @@ public  class GroupOfCards  extends WarGame{
                     }//end if
                     //otherwise player 2 wins the war round
                     else{
-                        deckP1.addAll(war1); //player2 get all 10 cards
+                        deckP1.addAll(war1); //player2 get all cards
                         deckP1.addAll(war2);
                         System.out.println("Winner of the War: Computer");
                     }                      

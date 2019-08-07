@@ -7,7 +7,7 @@
 package ca.sheridancollege.project;
 
 /**
- * Player class that takes player name and provide it to other classes.
+ * Player class stores player name and provide it to other classes.
  * 
  * @author skyhawks Sheridan 2019
  */
@@ -16,7 +16,7 @@ public class Player {
     
     //field variable
     private String playerName;
-	private String playerID;
+    private String playerID;
     
     public void setName(String newPlayerName){
         playerName=newPlayerName;
