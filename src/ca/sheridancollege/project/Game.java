@@ -2,64 +2,80 @@
  * SYST 17796 Project Winter 2019 Base code.
  * Students can modify and extend to implement their game.
  * Add your name as a modifier and the date!
- * Modified by: Raghav Sharma, Akshay Ghatge, Ark Patel, Lovepreet
+ * Modified by: Group SkyHawks
  */
 package ca.sheridancollege.project;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
- * The class that models your game. You should create a more specific
- * child of this class and instantiate the methods given.
- * @author dancye, 2018
+ *
+ * @author Group SkyHawks
  */
-public abstract class Game extends Card
-{
-    private final String gameName;//the title of the game
-    private ArrayList <Player> players;// the players of the game
-    
-    public Game(String givenName)
-    {  
-        gameName = givenName;
-        players = new ArrayList();
-    }
-
+public class Game extends Card {
     /**
-     * @return the gameName
+     * The Game class Takes the numbers and suits from by card class 
+     * to combine them and make a deck out of them.
+     * 
      */
-    public String getGameName() 
+    
+    
+    public Game(int s, int gVal)
     {
-        return gameName;
+        super(s,gVal);
     }
     
-     /**
-     * @return the players of this game
-     */
-    public ArrayList <Player> getPlayers() 
-    {
-        return players;
+    @Override
+    public String toString(){
+    //toString method combines the numbers and suits to make cards
+    
+        StringBuilder display = new StringBuilder();
+        
+        //for numbers 11,12,13,14 program will display jack,queen
+        //king, and ace respectively.
+        
+        switch(super.getValue()){
+            //since rank is int type, now match int 11 to String jack...14 to Ace
+            case 11:
+                display.append("Jack");
+                break;
+            case 12:
+                display.append("Queen");
+                break;
+            case 13:
+                display.append("King");
+                break;
+            case 14:
+                display.append("Ace");
+                break;    
+            default:
+                display.append(super.getValue()); //no need to modify
+                break;
+        }
+        
+        display.append(" of ");
+        
+        switch(super.getSuit()){
+            case 0:
+                display.append("Spades");
+                break;
+            case 1:
+                display.append("Hearts");
+                break;
+            case 2:
+                display.append("Clubs");
+                break;
+            case 3:
+                display.append("Diamonds");
+                break;
+            default: 
+                break;
+        }//end suit switch
+       
+        /**
+         * returns the all-round output of toString method.
+         */
+        return display.toString();
     }
-
-    /**
-     * @param players the players of this game
-     */
-    public void setPlayers(ArrayList <Player> players) 
-    {
-        this.players = players;
-    }
-    
-    /**
-     * Play the game. This might be one method or many method calls depending
-     * on your game.
-     */
-    public abstract void play();
-    
-    /**
-     * When the game is over, use this method to declare and display a winning
-     * player.
-     */
-    public abstract void declareWinner();
-
-   
-    
-}//end class
+	
+}

@@ -2,27 +2,62 @@
  * SYST 17796 Project Winter 2019 Base code.
  * Students can modify and extend to implement their game.
  * Add your name as a modifier and the date!
- * Modified by: Raghav Sharma, Akshay Ghatge, Ark Patel, Lovepreet
+ * Modified by: Group SkyHawks
  */
 package ca.sheridancollege.project;
 
 /**
- * A class to be used as the base Card class for the project. Must be general
- * enough to be instantiated for any Card game. Students wishing to add to the code 
- * should remember to add themselves as a modifier.
- * @author dancye, 2018
+ *  This class intialize the card numbers and suits 
+ * For War Game.
+ * 
+ * @author Group SKYHAWKS
  */
-public abstract class Card 
-{
+public class Card {
     
-    //default modifier for child classes
+    /* Intializing the suit and card numbers */
+    private int value; 
+    private int suit; 
+    
+    
+    /*The Constructor*/
+    public Card(int s, int gVal){
+        value = gVal;
+        suit = s;
+    }
+
+    //Getters
     
     /**
-     * Students should implement this method for their specific children classes 
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
+     * 
+     * @return The value (number)
      */
+    public int getValue(){
+        return value; 
+    }
     
-    @Override
-    public abstract String toString();
+    /**
+     * @return the suit
+     */
+    public int getSuit() {
+        return suit;
+    }
+
     
-}
+    //Setters
+    
+    /** 
+     * 
+     * @param gVal 
+     */
+    public void setValue(int gVal){
+        value = gVal;
+    }
+
+    /**
+     * @param suit the suit to set
+     */
+    public void setSuit(int suit) {
+        this.suit = suit;
+    }
+}//end Card Class 
+
