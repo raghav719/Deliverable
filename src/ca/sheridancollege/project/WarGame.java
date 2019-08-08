@@ -16,7 +16,7 @@ import java.util.Scanner;
  * that calls all other classes to make a game out of it.
  * @author Group SkyHawks
  */
-public class WarGame {
+public abstract class WarGame {
     
     public static void main(String[] args) {
         
@@ -42,11 +42,16 @@ public class WarGame {
 
          //Creating Player Object
          Player self=new Player();
-         
+         while(true){
         System.out.println("Enter Your Name: ");
         String name=in.nextLine();
-        self.setName(name);
-        
+        if(name.equals(null) || name.equals("")){
+            System.out.println("Enter A Valid Name.");
+        }else{
+            self.setName(name);
+            break;
+        }
+         }
         //object of GroupOfCards
         GroupOfCards obj = new GroupOfCards();
         

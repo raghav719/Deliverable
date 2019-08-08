@@ -20,8 +20,14 @@ public  class GroupOfCards  extends WarGame{
     
     public void playCard(LinkedList<Card> deckCPU,LinkedList<Card> deckP1,String player1)
     {
-        while(true){
-            
+        int size = deckCPU.size();
+        int size1=deckP1.size();
+        
+        boolean res=false;
+        res=checkShuffle(size,size1);
+        if(res){
+            System.out.println("Error: The size of shuffled deck is not same.");
+        }else{
             //creating card objects to compare the values later on
             Card p1Card = deckCPU.pop(); 
             Card p2Card = deckP1.pop();
@@ -92,14 +98,23 @@ public  class GroupOfCards  extends WarGame{
             //game over either one player runs out of card(deck size is 0)
             if(deckCPU.size() == 0 ){
                 System.out.println("............................GAME OVER............................\nWinner: "+ player1);
-                break;
+               
             }
             else if(deckP1.size() == 0){
                 System.out.println("............................GAME OVER............................\nWinner: Computer.");
-                break;
+               
             }
            
         } //end of while loop
-        
     }
+
+    public boolean checkShuffle(int size, int size1) {
+        if(size==size1){
+            return true;
+        }//To change body of generated methods, choose Tools | Templates.
+        else {
+            return false;
+        }
+    }
+        
 }
